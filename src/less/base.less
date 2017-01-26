@@ -1,0 +1,62 @@
+@background-color: #F0F0E9; // MOBILE
+// DESKTOP
+@media only screen and (min-width: 961px) {
+    .page {
+        // position: relative;
+        // height: 100%;
+    }
+
+    .login {
+        .message-box {
+            margin: auto;
+            width: 50%;
+        }
+    }
+
+    .signup {
+        .message-box {
+            margin: auto;
+            width: 50%;
+        }
+    }
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background: @background-color;
+
+    #application {
+        height: 100%;
+
+        .app {
+            height: 100%;
+        }
+    }
+
+    .page {
+        // top: 0; bottom: 0; left: 0; right: 0;
+        // position: absolute;
+        // margin: 0;
+        // z-index: -1
+    }
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.page {
+    margin: 8px;
+}
