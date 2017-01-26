@@ -1,10 +1,10 @@
 import {just, mergeArray} from 'most'
 import {async} from 'most-subject'
 import isolate from '@cycle/isolate'
-import ListItem from '../list-item/list-item-index'
-import intent from './list-intent'
-import model from './list-model'
-import view from './list-view'
+import ListItem from '../list-item'
+import intent from './intent'
+import model from './model'
+import view from './view'
 
 const initialState = []
 const makeItemWrapper = (sources) => {

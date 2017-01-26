@@ -1,8 +1,8 @@
 import {objOf} from 'ramda'
-import model from './http-form-model'
-import view from './http-form-view'
-import FormInput from '../form-input/form-input-index'
-import SubmitButton from '../submit-button/submit-button-index'
+import model from './model'
+import view from './view'
+import FormInput from '../form-input'
+import SubmitButton from '../submit-button'
 
 const HTTPForm = (sources, prop$) => {
   const inputWrapper = sources => (as, prop$, change$) => {

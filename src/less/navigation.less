@@ -10,16 +10,20 @@
 // DESKTOP
 @media only screen and (min-width: 961px) {
   .navigation {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     nav {
-      background: black;
+      background: white;
+      box-shadow: 0 0 5px rgba(57,70,78,1.2);
 
       ul.navigation-list {
         margin: 0;
         padding: 0;
         overflow: hidden;
+        display: flex;
+        align-items: center;
         li.navigation-list-item {
           list-style: none;
           float: left;
@@ -36,26 +40,29 @@
             line-height: 60px;
           }
           &:hover a {
-            color: white;
+            color: black;
             cursor: pointer;
           }
           &:first-of-type {
-            background:black;
             a.navigation-list-item-link {
-              font-family: 'Bungee Inline', cursive;
+              width: 140px;
+              height: 28px;
+              background-image: url("http://localhost:1337/assets/logo.png");
+              background-size: contain;
+              background-repeat: no-repeat;
               color: #E8E8E8;
               font-size: 140%;
             }
           }
           &:first-of-type:hover {
             a.navigation-list-item-link {
-              color: white;
+              color: black;
             }
           }
         }
         li.navigation-list-item.active {
           a.navigation-list-item-link {
-            color: white;
+            color: black;
           }
         }
       }

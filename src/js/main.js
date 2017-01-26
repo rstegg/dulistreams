@@ -1,16 +1,16 @@
 import { just } from 'most'
 // import {async} from 'most-subject'
 import view from './main-view.js'
-import Router from './components/router/router-index'
-import Navigation from './components/navigation/navigation-index'
+import Router from './components/router'
+import Navigation from './components/navigation'
 
-import Home from './pages/home/home-index'
+import Home from './pages/home'
 // import Slideshow from './pages/slideshow/slideshow-index'
-import SignUp from './pages/sign-up/sign-up-index'
-import Login from './pages/login/login-index.js'
+import SignUp from './pages/sign-up'
+import Login from './pages/login'
 
 const navPropDefault$ = just([
-  {href: '/', title: 'Starbugs'},
+  {href: '/', title: ''},
   {href: '/login', title: 'Login', active: true},
   {href: '/sign-up', title: 'Signup'}
 ])

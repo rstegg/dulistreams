@@ -1,18 +1,26 @@
 import {just, combine} from 'most'
 import config from '../../config'
-import HTTPForm from '../../components/http-form/http-form-index'
-import MessageBox from '../../components/message-box/message-box-index'
-import {validate} from '../../validation/validation-index'
-import view from './sign-up-view'
+import HTTPForm from '../../components/http-form'
+import MessageBox from '../../components/message-box'
+import {validate} from '../../validation'
+import view from './view'
 
 const Signup = (sources) => {
   const formProp$ = just({
     inputs: [
       {
-        as: 'username',
+        as: 'first_name',
         prop$: just({
           disabled: false,
-          placeholder: 'Username',
+          placeholder: 'First Name',
+          type: 'text',
+          value: ''
+        })
+      }, {
+        as: 'last_name',
+        prop$: just({
+          disabled: false,
+          placeholder: 'Last Name',
           type: 'text',
           value: ''
         })
@@ -32,28 +40,20 @@ const Signup = (sources) => {
           type: 'password',
           value: ''
         })
-      }, {
-        as: 'verify-password',
-        prop$: just({
-          disabled: false,
-          placeholder: 'Verify Password',
-          type: 'password',
-          value: ''
-        })
       }
     ],
     button: {
       prop$: just({
         disabled: false,
         spinner: false,
-        label: 'Sign In'
+        label: 'Sign Up'
       })
     },
     http: {
       url: config.url.signup,
       method: 'POST'
     },
-    validation: validate(['username', 'email', 'password', 'passwordVerification'])
+    validation: validate(['first_name', 'last_name', 'email', 'password'])
   })
   const form = HTTPForm(sources, formProp$)
   const messageBox = MessageBox(sources, just([]), form.messages$)

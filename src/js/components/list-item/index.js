@@ -1,6 +1,6 @@
-import model from './list-item-model'
-import view from './list-item-view'
-import intent from './list-item-intent'
+import model from './model'
+import view from './view'
+import intent from './intent'
 
 const ListItem = (sources) => {
   const actions = intent(sources)

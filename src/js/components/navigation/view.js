@@ -1,4 +1,4 @@
-import {div, ul, li, nav, a} from '@cycle/dom'
+import {div, ul, li, nav, a, img} from '@cycle/dom'
 
 const view = (prop$) => {
   return prop$.map(props =>

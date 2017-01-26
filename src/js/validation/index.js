@@ -1,10 +1,14 @@
 import {curry} from 'ramda'
 
-const username = (data) => {
-  return data['username'].length < 2 ||
-         data['username'].length > 39
-       ? 'Username must be between 2 and 39 characters.'
-       : ''
+const first_name = (data) => {
+  return data['first_name'].match(/^[a-z ,.'-]+$/i).length
+       ? ''
+       : 'First name is not valid.'
+}
+const last_name = (data) => {
+  return data['last_name'].match(/^[a-z ,.'-]+$/i).length
+       ? ''
+       : 'First name is not valid.'
 }
 
 const email = (data) => {
@@ -21,12 +25,7 @@ const password = (data) => {
        : ''
 }
 
-const passwordVerification = (data) => {
-  return data['password'] !== data['verify-password']
-       ? 'Password and verification must be equal.'
-       : ''
-}
-const validations = {username, email, password, passwordVerification}
+const validations = {first_name, last_name, email, password}
 
 const validate = curry((fns, data) => {
   return fns

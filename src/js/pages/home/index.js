@@ -1,6 +1,6 @@
 import {periodic, combine} from 'most'
 import {div} from '@cycle/dom'
-import List from '../../components/list/list-index'
+import List from '../../components/list'
 
 const view = (fade$) => {
   return fade$.map(op =>

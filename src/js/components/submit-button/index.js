@@ -1,7 +1,7 @@
 import {just} from 'most'
 import isolate from '@cycle/isolate'
-import view from './submit-button-view'
-import intent from './submit-button-intent'
+import view from './view'
+import intent from './intent'
 
 const SubmitButton = (sources, prop$, change$ = just((x) => x)) => {
   const state$ = change$

@@ -1,8 +1,8 @@
 import {just, combine} from 'most'
-import view from './login-view'
-import HTTPForm from '../../components/http-form/http-form-index'
-import MessageBox from '../../components/message-box/message-box-index'
-import {validate} from '../../validation/validation-index'
+import view from './view'
+import HTTPForm from '../../components/http-form'
+import MessageBox from '../../components/message-box'
+import {validate} from '../../validation'
 import config from '../../config'
 
 const Login = (sources) => {

@@ -1,9 +1,9 @@
 import {just, merge} from 'most'
 import {hold, async} from 'most-subject'
 import isolate from '@cycle/isolate'
-import view from './message-box-view'
-import model from './message-box-model'
-import Message from '../message/message-index'
+import view from './view'
+import model from './model'
+import Message from '../message'
 
 const messages = {
   success: Message,
